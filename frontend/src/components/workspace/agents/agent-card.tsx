@@ -60,12 +60,12 @@ export function AgentCard({ agent }: AgentCardProps) {
               <div className="bg-primary/10 text-primary flex h-9 w-9 shrink-0 items-center justify-center rounded-lg">
                 <BotIcon className="h-5 w-5" />
               </div>
-              <div className="min-w-0">
-                <CardTitle className="truncate text-base">
+              <div className="min-w-0 flex-1">
+                <CardTitle className="text-base leading-tight break-words">
                   {agent.name}
                 </CardTitle>
                 {agent.model && (
-                  <Badge variant="secondary" className="mt-0.5 text-xs">
+                  <Badge variant="secondary" className="mt-1 text-xs">
                     {agent.model}
                   </Badge>
                 )}
@@ -73,7 +73,7 @@ export function AgentCard({ agent }: AgentCardProps) {
             </div>
           </div>
           {agent.description && (
-            <CardDescription className="mt-2 line-clamp-2 text-sm">
+            <CardDescription className="mt-2 line-clamp-3 text-sm">
               {agent.description}
             </CardDescription>
           )}

@@ -267,7 +267,7 @@
 
 [data-slot="sidebar-inner"] {
   background-image:
-    linear-gradient(rgba(250, 249, 246, 0.82), rgba(250, 249, 246, 0.82)),
+    linear-gradient(rgba(250, 249, 246, 0.5), rgba(250, 249, 246, 0.5)),
     url("/deer-pattern.jpg");
   background-size: cover;
   background-position: center;
@@ -276,7 +276,7 @@
 
 main[data-slot="sidebar-inset"] {
   background-image:
-    linear-gradient(rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.9)),
+    linear-gradient(rgba(250, 249, 246, 0.65), rgba(250, 249, 246, 0.65)),
     url("/deer-pattern.jpg");
   background-size: cover;
   background-position: center;
@@ -286,14 +286,27 @@ main[data-slot="sidebar-inset"] {
 
 .dark [data-slot="sidebar-inner"] {
   background-image:
-    linear-gradient(rgba(36, 35, 35, 0.86), rgba(36, 35, 35, 0.86)),
+    linear-gradient(rgba(36, 35, 35, 0.6), rgba(36, 35, 35, 0.6)),
     url("/deer-pattern.jpg");
 }
 
 .dark main[data-slot="sidebar-inset"] {
   background-image:
-    linear-gradient(rgba(36, 35, 35, 0.93), rgba(36, 35, 35, 0.93)),
+    linear-gradient(rgba(36, 35, 35, 0.75), rgba(36, 35, 35, 0.75)),
     url("/deer-pattern.jpg");
+}
+
+/* Boost contrast on action chips + sidebar nav text against the patterned
+ * background. Forces the muted body-text color to full foreground on
+ * clickable chips/nav items so they stay legible. */
+[data-slot="suggestions-list"] button,
+[data-slot="suggestions-list"] button * {
+  color: var(--foreground) !important;
+}
+
+[data-slot="sidebar-inner"] [data-sidebar="menu-button"],
+[data-slot="sidebar-inner"] [data-sidebar="menu-button"] * {
+  color: var(--foreground) !important;
 }
 
 /* Lift the welcome greeting + key surfaces above the pattern with a soft
