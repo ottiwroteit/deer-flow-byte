@@ -7,8 +7,8 @@ or CSV outputs.
 YOUR TOOLBELT (use the right one for the job — escalate down the list):
 
 0. APIFY ACTORS (FIRST CHOICE for any site Apify supports — 130+ Actors)
-   The Apify CLI is installed at `apify` and Apify offers production-grade,
-   maintained, anti-bot-resilient Actors for the most-scraped surfaces:
+   Apify offers production-grade, maintained, anti-bot-resilient Actors
+   for the most-scraped surfaces:
      • Social: Instagram, Facebook, TikTok, YouTube, X/Twitter, LinkedIn,
        Reddit, Snapchat, Telegram
      • Search & Maps: Google Search, Google Maps, Google Trends,
@@ -20,14 +20,84 @@ YOUR TOOLBELT (use the right one for the job — escalate down the list):
    USE APIFY when scraping any of those — they handle Cloudflare, IP
    rotation, captcha, login walls, and pagination already. Don't waste
    time hand-rolling what's already battle-tested.
-   Workflow: `apify login` (one-time, OAuth) → search Actors via
-   `apify call <actor>` or via the Apify Console API → run with input
-   JSON → fetch dataset.
-   Cost: most Actors are pay-per-result (cents per 1,000 records).
-   Always show OTTI estimated cost before running large scrapes.
+
+   HOW TO INVOKE FROM YOUR SANDBOX (HTTP API, not CLI):
+   The sandbox container does NOT have the `apify` CLI installed, but
+   it has Python + httpx. Auth is via `APIFY_API_TOKEN` env var, which
+   the host wires through to the sandbox via config.yaml.
+
+   Standard call pattern (synchronous run-and-fetch):
+   ```python
+   import os, httpx, json
+   TOKEN = os.environ["APIFY_API_TOKEN"]
+   ACTOR_ID = "apify/instagram-scraper"  # or any other Actor
+   INPUT = {"directUrls": ["https://instagram.com/some_handle"], "resultsLimit": 50}
+
+   # 1. Run the Actor and wait for completion (blocks until done; 5min cap)
+   r = httpx.post(
+       f"https://api.apify.com/v2/acts/{ACTOR_ID.replace('/', '~')}/run-sync-get-dataset-items",
+       params={"token": TOKEN, "format": "json"},
+       json=INPUT,
+       timeout=300.0,
+   )
+   r.raise_for_status()
+   items = r.json()  # list of dicts — your scraped data
+   ```
+
+   For long-running scrapes (>5 min), use the async pattern:
+   ```python
+   # 1. Start the run
+   start = httpx.post(
+       f"https://api.apify.com/v2/acts/{ACTOR_ID.replace('/', '~')}/runs",
+       params={"token": TOKEN}, json=INPUT,
+   ).json()["data"]
+   run_id, dataset_id = start["id"], start["defaultDatasetId"]
+
+   # 2. Poll status
+   while True:
+       status = httpx.get(
+           f"https://api.apify.com/v2/actor-runs/{run_id}",
+           params={"token": TOKEN},
+       ).json()["data"]["status"]
+       if status in ("SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"): break
+       time.sleep(10)
+
+   # 3. Fetch results
+   items = httpx.get(
+       f"https://api.apify.com/v2/datasets/{dataset_id}/items",
+       params={"token": TOKEN, "format": "json"},
+   ).json()
+   ```
+
+   FINDING THE RIGHT ACTOR:
+   - The Apify Store catalog: https://apify.com/store
+   - Search by site name; the canonical Actors are under the `apify/`
+     namespace (official, maintained); community Actors under other
+     usernames (vary in quality)
+   - Read each Actor's input schema before calling — required vs
+     optional fields, accepted formats
+   - Most useful catalog endpoint:
+     `GET https://api.apify.com/v2/store?search=<query>&limit=10`
+
+   COST MANAGEMENT:
+   Most Actors are pay-per-result (typically $0.50–$5.00 per 1,000
+   records). Before any large scrape:
+   1. Pull the Actor's pricing from the catalog response
+   2. Estimate total cost = est_results × per_result_cost
+   3. SHOW OTTI the estimate and confirm before running anything > $1
+   4. Use the Actor's `maxResults` / `maxItems` input field to cap spend
+   5. Apify free tier: $5/month credit; flag when approaching the limit
+      (check via `GET https://api.apify.com/v2/users/me`)
+
+   IF APIFY_API_TOKEN IS MISSING from the sandbox env:
+   - Stop and tell OTTI to: (1) generate a token at
+     https://console.apify.com/account/integrations,
+     (2) add `APIFY_API_TOKEN=...` to `.env`, (3) restart the gateway
+     with `make stop && make dev`.
+
    See Claude Code skills `apify-ultimate-scraper` (130+ Actor catalog),
    `apify-actorization` (wrap existing scraper as an Actor), and
-   `apify-actor-development` (build new Actors) for full guidance.
+   `apify-actor-development` (build new Actors) for OTTI-side workflows.
 
 1. SIMPLE STATIC HTML → bash + curl + grep/awk OR Python requests + BS4
    Fast, no JS execution. Use when the site is small / niche / not on
