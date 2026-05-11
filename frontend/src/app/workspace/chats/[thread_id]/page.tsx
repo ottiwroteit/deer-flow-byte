@@ -220,7 +220,11 @@ export default function ChatPage() {
                     }
                     context={settings.context}
                     extraHeader={
-                      isWelcomeMode && <Welcome mode={settings.context.mode} />
+                      isWelcomeMode && (
+                        <div className="ai-greeting-card bg-card mx-auto mb-4 rounded-2xl border px-6 py-4">
+                          <Welcome mode={settings.context.mode} />
+                        </div>
+                      )
                     }
                     disabled={
                       env.NEXT_PUBLIC_STATIC_WEBSITE_ONLY === "true" ||

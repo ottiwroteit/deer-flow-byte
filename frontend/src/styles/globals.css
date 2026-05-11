@@ -257,6 +257,61 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* ─── DEER SKIN BACKGROUND TREATMENT ──────────────────────────────────────
+ * Pattern asset: drop a deer-fur image at /public/deer-pattern.jpg
+ * (see /public/DEER-PATTERN-README.md for sourcing instructions).
+ * Targets the shadcn Sidebar inner panel + the main SidebarInset surface
+ * via their data-slot attributes — no edits to ui/sidebar.tsx needed.
+ * Each surface layers a high-opacity cream overlay over the pattern so
+ * legibility is preserved on cards, inputs, chips, and dropdowns. */
+
+[data-slot="sidebar-inner"] {
+  background-image:
+    linear-gradient(rgba(250, 249, 246, 0.82), rgba(250, 249, 246, 0.82)),
+    url("/deer-pattern.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main[data-slot="sidebar-inset"] {
+  background-image:
+    linear-gradient(rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.9)),
+    url("/deer-pattern.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.dark [data-slot="sidebar-inner"] {
+  background-image:
+    linear-gradient(rgba(36, 35, 35, 0.86), rgba(36, 35, 35, 0.86)),
+    url("/deer-pattern.jpg");
+}
+
+.dark main[data-slot="sidebar-inset"] {
+  background-image:
+    linear-gradient(rgba(36, 35, 35, 0.93), rgba(36, 35, 35, 0.93)),
+    url("/deer-pattern.jpg");
+}
+
+/* Lift the welcome greeting + key surfaces above the pattern with a soft
+ * shadow. Cards (--card) are already opaque via the theme — these just
+ * give them more visual depth on the patterned background. */
+[data-slot="sidebar-inner"],
+main[data-slot="sidebar-inset"] {
+  /* container itself is patterned; children inherit nothing, stay opaque */
+}
+
+main[data-slot="sidebar-inset"] [data-slot="card"],
+main[data-slot="sidebar-inset"] [role="dialog"],
+main[data-slot="sidebar-inset"] .ai-greeting-card {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px -8px rgba(0, 0, 0, 0.08);
+}
+
 .dark {
   --background: oklch(0.24 0.0036 106.64);
   --foreground: oklch(0.985 0 0);
