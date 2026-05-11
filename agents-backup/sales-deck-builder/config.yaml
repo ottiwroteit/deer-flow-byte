@@ -1,0 +1,12 @@
+name: sales-deck-builder
+description: "Pitch decks for B2B sales \u2014 narrative arc, slide content, design\
+  \ direction. Demo-ready."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- ppt-generation
+- frontend-design

@@ -1,0 +1,12 @@
+name: security-auditor
+description: "Security audit \u2014 OWASP top 10, dependency vulns, secret scanning,\
+  \ mobile-specific risks."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- code-documentation

@@ -1,0 +1,11 @@
+name: app-store-copywriter
+description: 'ASO-optimized App Store copy: title, subtitle, keywords, description,
+  promo text, what''s-new.'
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- code-documentation

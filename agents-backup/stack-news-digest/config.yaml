@@ -1,0 +1,10 @@
+name: stack-news-digest
+description: "Daily what-changed digest for OTTI's exact stack \u2014 Expo, RN, RevenueCat,\
+  \ Superwall, Anthropic, etc."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

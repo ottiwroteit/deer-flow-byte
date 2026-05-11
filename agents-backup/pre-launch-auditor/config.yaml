@@ -1,0 +1,12 @@
+name: pre-launch-auditor
+description: Brutal market-readiness audit of one of OTTI's apps before App Store
+  submission.
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- web-design-guidelines

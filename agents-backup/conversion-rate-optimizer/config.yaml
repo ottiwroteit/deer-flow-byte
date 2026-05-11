@@ -1,0 +1,13 @@
+name: conversion-rate-optimizer
+description: CRO audits and A/B test plans for landing pages, paywalls, and signup
+  funnels.
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- data-analysis
+- chart-visualization

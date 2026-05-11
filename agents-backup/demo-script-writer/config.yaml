@@ -1,0 +1,9 @@
+name: demo-script-writer
+description: "Sales demo and product walkthrough scripts \u2014 narrative-driven,\
+  \ objection-handled, demo-day ready."
+tool_groups:
+- file:read
+- file:write
+skills:
+- consulting-analysis
+- ppt-generation

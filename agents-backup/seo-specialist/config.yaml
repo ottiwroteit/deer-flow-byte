@@ -1,0 +1,13 @@
+name: seo-specialist
+description: 'Full SEO: keyword research, content gaps, technical audits, backlink
+  strategy, SERP teardown.'
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- data-analysis
+- chart-visualization

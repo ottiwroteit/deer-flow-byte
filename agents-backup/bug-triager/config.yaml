@@ -1,0 +1,12 @@
+name: bug-triager
+description: "Sentry error / stack trace / log \u2192 root cause hypothesis + fix\
+  \ path. Saves Claude Code from cold-context debugging."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- code-documentation

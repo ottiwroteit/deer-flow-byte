@@ -1,0 +1,11 @@
+name: x-twitter-listener
+description: "Monitors specific X/Twitter accounts and topics for actionable signals\
+  \ \u2014 alerts OTTI to threads worth reading."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis

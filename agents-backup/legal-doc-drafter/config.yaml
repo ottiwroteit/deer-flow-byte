@@ -1,0 +1,10 @@
+name: legal-doc-drafter
+description: Privacy Policy + Terms of Service for new apps under RIGHT AT HOME ENT
+  INC.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

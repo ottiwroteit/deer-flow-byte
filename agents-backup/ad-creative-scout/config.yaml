@@ -1,0 +1,11 @@
+name: ad-creative-scout
+description: "Reverse-engineer winning paid-media creative in a category \u2014 hooks,\
+  \ angles, formats, influencers."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- chart-visualization

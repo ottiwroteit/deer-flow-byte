@@ -1,0 +1,10 @@
+name: documentation-keeper
+description: "Keeps OTTI's docs synced with code \u2014 finds rot, generates new docs,\
+  \ maintains context for future Claude sessions."
+tool_groups:
+- file:read
+- file:write
+- bash
+skills:
+- consulting-analysis
+- code-documentation

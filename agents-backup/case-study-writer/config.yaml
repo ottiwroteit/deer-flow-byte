@@ -1,0 +1,10 @@
+name: case-study-writer
+description: Long-form customer case studies for B2B credibility and sales enablement.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- newsletter-generation

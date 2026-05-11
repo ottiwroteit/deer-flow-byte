@@ -1,0 +1,10 @@
+name: customer-voice-miner
+description: Surface unfiltered user complaints, desires, and verbatim language from
+  reviews, Reddit, and forums.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

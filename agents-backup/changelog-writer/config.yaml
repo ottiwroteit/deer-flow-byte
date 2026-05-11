@@ -1,0 +1,10 @@
+name: changelog-writer
+description: Reads git log between tags or dates, writes user-facing What's New +
+  internal release notes.
+tool_groups:
+- file:read
+- file:write
+- bash
+skills:
+- code-documentation
+- consulting-analysis

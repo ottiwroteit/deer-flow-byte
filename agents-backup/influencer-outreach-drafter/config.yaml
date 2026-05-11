@@ -1,0 +1,10 @@
+name: influencer-outreach-drafter
+description: Personalized DMs/emails to TikTok creators with deal terms, talking points,
+  and follow-ups.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

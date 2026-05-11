@@ -1,0 +1,12 @@
+name: dependency-monitor
+description: "Tracks every dependency across OTTI's apps \u2014 what to upgrade, what's\
+  \ deprecated, what has CVEs, breaking-change risk."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- code-documentation

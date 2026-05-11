@@ -1,0 +1,11 @@
+name: icp-researcher
+description: "Define and find the Ideal Customer Profile for B2B offerings \u2014\
+  \ segmentation, target lists, signals."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- data-analysis

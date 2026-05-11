@@ -1,0 +1,10 @@
+name: ad-script-writer
+description: TikTok / Meta / YouTube ad scripts in 15s/30s/60s with hooks, angles,
+  and creator-ready briefs.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

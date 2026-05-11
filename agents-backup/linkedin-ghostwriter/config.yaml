@@ -1,0 +1,11 @@
+name: linkedin-ghostwriter
+description: "LinkedIn ghostwriter for OTTI's founder brand \u2014 long-form posts,\
+  \ comments, profile copy, articles."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- newsletter-generation

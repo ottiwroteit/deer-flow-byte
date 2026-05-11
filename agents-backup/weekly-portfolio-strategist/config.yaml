@@ -1,0 +1,13 @@
+name: weekly-portfolio-strategist
+description: "Monday morning portfolio review \u2014 which app needs attention this\
+  \ week, with focus brief and KPIs."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- data-analysis
+- chart-visualization

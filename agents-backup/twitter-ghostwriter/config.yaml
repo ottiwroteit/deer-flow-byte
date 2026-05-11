@@ -1,0 +1,10 @@
+name: twitter-ghostwriter
+description: "Twitter/X ghostwriter \u2014 single tweets, threads, reply strategy,\
+  \ profile copy. Builds OTTI's founder brand."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

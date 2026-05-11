@@ -1,0 +1,11 @@
+name: niche-scout
+description: Discover under-served mobile app verticals where a focused premium app
+  could win $20K/mo.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- systematic-literature-review
+- consulting-analysis

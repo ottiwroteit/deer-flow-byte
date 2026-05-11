@@ -1,0 +1,10 @@
+name: global-tech-scout
+description: "Tracks tech trends from non-US regions (China, Japan, Korea, Brazil,\
+  \ EU, India) \u2014 what they're ahead on."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

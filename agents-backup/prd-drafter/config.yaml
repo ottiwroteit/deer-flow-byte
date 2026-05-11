@@ -1,0 +1,11 @@
+name: prd-drafter
+description: Turn raw research, ideas, and market data into a complete PRD ready for
+  implementation.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- code-documentation

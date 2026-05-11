@@ -1,0 +1,10 @@
+name: review-responder
+description: "Drafts brand-voice replies to App Store and Google Play reviews \u2014\
+  \ categorized, prioritized, ready to ship."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

@@ -1,0 +1,11 @@
+name: aso-analyst
+description: "App Store Optimization research \u2014 keyword landscape, listing teardown,\
+  \ conversion factors."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- data-analysis
+- chart-visualization

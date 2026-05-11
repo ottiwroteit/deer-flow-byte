@@ -1,0 +1,11 @@
+name: github-trend-scout
+description: "Daily/weekly intel on new GitHub repos worth knowing \u2014 Tom Doerr\u2013\
+  style curation filtered for OTTI's interests."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis

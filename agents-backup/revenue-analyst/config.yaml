@@ -1,0 +1,11 @@
+name: revenue-analyst
+description: "Drop in RevenueCat / Superwall / AppsFlyer CSVs \u2014 get cohort, conversion,\
+  \ churn, and LTV analysis with charts."
+tool_groups:
+- file:read
+- file:write
+- bash
+skills:
+- data-analysis
+- chart-visualization
+- consulting-analysis

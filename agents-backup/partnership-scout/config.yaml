@@ -1,0 +1,10 @@
+name: partnership-scout
+description: Find integration, co-marketing, and distribution partners. Drafts partner
+  pitches.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

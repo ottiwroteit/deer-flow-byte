@@ -1,0 +1,10 @@
+name: press-pitch-writer
+description: PR pitches to journalists, podcast hosts, and newsletter writers. Drafts
+  press releases too.
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

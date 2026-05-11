@@ -1,0 +1,11 @@
+name: ai-frontier-tracker
+description: "Daily intel on new AI model releases, papers, agent frameworks, SDK\
+  \ updates \u2014 bias toward applicable."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis

@@ -1,0 +1,13 @@
+name: competitor-teardown
+description: "Full strategic teardown of a competing mobile app \u2014 features, monetization,\
+  \ ASO, marketing, weaknesses, attack angles for OTTI."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- consulting-analysis
+- chart-visualization
+- ppt-generation

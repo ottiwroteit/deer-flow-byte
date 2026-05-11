@@ -1,0 +1,10 @@
+name: content-strategy-planner
+description: "Quarterly content calendar \u2014 ties SEO, social, email into a coordinated\
+  \ plan."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis

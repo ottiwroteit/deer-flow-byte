@@ -1,0 +1,11 @@
+name: code-reviewer
+description: "Structured code review \u2014 Critical Issues / Suggestions / What Looks\
+  \ Good / Verdict format. Same as OTTI's /engineering:code-review skill."
+tool_groups:
+- file:read
+- bash
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- code-documentation

@@ -1,0 +1,11 @@
+name: spatial-3d-scout
+description: "Tracks 3D, AR/VR, WebGPU, Gaussian Splat, Vision Pro, spatial computing\
+  \ \u2014 applied to mobile + design."
+tool_groups:
+- web
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- frontend-design

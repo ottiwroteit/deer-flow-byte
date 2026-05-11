@@ -1,0 +1,10 @@
+name: email-sequence-writer
+description: Onboarding, paywall nudge, win-back, and churn-prevention email sequences
+  with copy + send logic.
+tool_groups:
+- file:read
+- file:write
+skills:
+- deep-research
+- consulting-analysis
+- newsletter-generation

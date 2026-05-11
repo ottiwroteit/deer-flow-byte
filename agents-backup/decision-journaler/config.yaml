@@ -1,0 +1,9 @@
+name: decision-journaler
+description: "Captures architecture / strategic decisions made in chat \u2014 preserves\
+  \ the WHY for future Claude sessions and future OTTI."
+tool_groups:
+- file:read
+- file:write
+skills:
+- consulting-analysis
+- code-documentation

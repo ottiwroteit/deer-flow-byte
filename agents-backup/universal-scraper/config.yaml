@@ -1,0 +1,12 @@
+name: universal-scraper
+description: "Elite web scraper \u2014 multi-strategy, anti-bot aware, pagination/rate-limit/retry\
+  \ handled. Outputs clean JSON/CSV."
+tool_groups:
+- web
+- file:read
+- file:write
+- bash
+skills:
+- deep-research
+- data-analysis
+- consulting-analysis
